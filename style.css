@@ -1,0 +1,182 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.todo-app{
+    width:100%;
+    max-width:500px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.todo-app h1{
+    text-align:center;
+    color:#fff;
+    margin-bottom:30px;
+    font-size:2rem;
+    font-weight:700;
+}
+
+/* Input & Button */
+
+input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    font-size:16px;
+    margin-bottom:15px;
+    background:#fff;
+    color:#333;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+input::placeholder{
+    color:#888;
+}
+
+.btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#4CAF50;
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    margin-bottom:25px;
+}
+
+.btn:hover{
+    background:#43a047;
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+/* Todo List */
+
+.Todo-List ul{
+    list-style:none;
+}
+
+.Todo-List li{
+    background:#fff;
+    color:#333;
+    margin-bottom:15px;
+    padding:14px 16px;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:17px;
+    box-shadow:0 6px 15px rgba(0,0,0,.08);
+    transition:.3s;
+    word-break:break-word;
+}
+
+.Todo-List li:hover{
+    transform:translateX(5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+/* Delete Button */
+
+.dltbtn{
+    border:none;
+    background:#ff4d4d;
+    color:white;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.dltbtn:hover{
+    background:#d63031;
+    transform:scale(1.05);
+}
+
+/* Scroll if many tasks */
+
+.Todo-List{
+    max-height:350px;
+    overflow-y:auto;
+    padding-right:5px;
+}
+
+/* Custom Scrollbar */
+
+.Todo-List::-webkit-scrollbar{
+    width:6px;
+}
+
+.Todo-List::-webkit-scrollbar-thumb{
+    background:#ffffff88;
+    border-radius:20px;
+}
+
+.Todo-List::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+    .todo-app{
+        padding:25px;
+    }
+
+    .todo-app h1{
+        font-size:1.7rem;
+    }
+
+    input{
+        font-size:15px;
+    }
+
+    .btn{
+        font-size:16px;
+    }
+
+    .Todo-List li{
+        font-size:15px;
+        padding:12px;
+    }
+
+    .dltbtn{
+        padding:7px 12px;
+        font-size:14px;
+    }
+}
